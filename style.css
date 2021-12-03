@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter&family=Comforter+Brush&family=Lobster&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-image: linear-gradient(120deg,rgb(57, 84, 158),rgb(53, 232, 214)) ;
+}
+
+#header{
+
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+#todo-input{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo-input form{
+    background-color: white;
+}
+
+#input-task{
+    width: 20vw;
+}
+
+#add-task{
+    cursor: pointer;
+    font-size: 1.5em;
+}
+#input-task,
+#add-task{
+
+    outline: none;
+    padding: 1rem;
+    border: none;
+
+}
+
+#add-task:hover{
+    background-image: repeating-radial-gradient(circle,rgb(57, 84, 158),rgb(53, 232, 214)) ;
+    
+    color: white;
+}
+
+#reset{
+    height: 15vh;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+#reset button{
+    
+    padding: 1rem;
+    font-size: 0.5em;
+    border: none;
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    margin: 1rem;
+}
+
+
+#reset button:hover{
+    background-image:linear-gradient(120deg,rgb(57, 84, 158),rgb(53, 232, 214)) ;
+    box-shadow: 3px 3px 3px #454;
+}
+
+#select{
+    
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select-container{
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#select{
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+.select-container::after{
+    content : "\25BC";
+    font-size: 1rem;
+    padding: 1rem;
+    background-image:linear-gradient(120deg,rgb(57, 84, 158),rgb(53, 232, 214))  ;
+    color: white;
+    position: absolute;
+    background-color: violet;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+#todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem ;
+}
+
+#todo-list{
+    list-style: none;
+   
+}
+
+.new-todo{
+
+    min-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    background-color: white;
+    transition: transform 2s ease-out;
+    
+
+}
+
+.trash-button,.check-button{
+    
+    outline: none;
+    border: none;
+    padding: 0.8em;
+    cursor: pointer;
+}
+.trash-button i,
+.check-button i{
+    pointer-events: none;
+}
+
+
+.item{
+    flex: 1;
+    padding: 1rem;
+}
+.trash-button{
+background-color: rgb(236, 68, 68);
+color: white;
+}
+.check-button{
+    background-color: rgb(61, 216, 61);
+    color: white;
+} 
+
+.trash-button:hover{
+    background-image: linear-gradient(120deg,rgb(57, 84, 158),rgb(53, 232, 214)) ;
+    color: rgb(226, 62, 62);
+}
+
+.check-button:hover{
+    background-image: linear-gradient(120deg,rgb(57, 84, 158),rgb(53, 232, 214)) ;
+    color: greenyellow;
+    
+}
+
+.fall{
+    transform: translateY(6rem) rotateZ(20deg);
+
+    opacity: 0.2;
+}
+
+.completed{
+    transition: all 1s linear;
+    text-decoration: line-through;
+    opacity: 0.5;
+
+}
